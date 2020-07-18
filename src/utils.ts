@@ -61,7 +61,7 @@ export function getLinksFromString(string: string):RegExpMatchArray {
   }
   
   function getMatches(string: string, regex: RegExp, index: number):string[] {
-    index || (index = 2); // default to the first capturing group
+    index || (index = 2); 
     let matches = [];
     let match;
     while ((match = regex.exec(string))) {

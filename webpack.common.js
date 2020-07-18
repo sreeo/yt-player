@@ -30,7 +30,10 @@ module.exports = {
             loader: "sass-loader" // Compiles Sass to CSS
           }
         ]
-      }
+      }, 
+    { exclude: /__tests__//*$
+      
+    }
     ]
   },
   resolve: {
