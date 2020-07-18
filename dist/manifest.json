@@ -4,7 +4,7 @@
     "name": "YT Player",
     "description":
         "YT link aggregator",
-    "version": "1.0.0",
+    "version": "0.0.0",
 
     "browser_action": {
         "default_icon": "icon16.png",
