@@ -31,7 +31,7 @@ module.exports = {
           }
         ]
       }, 
-    { exclude: /__tests__//*$
+    { exclude: /(^\/__tests__\/.*$)/gm
       
     }
     ]

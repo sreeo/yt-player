@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 
 
 import "./Popup.scss";
-import {getLinksFromString, getIdsFromLinksAndCreatePlaylist} from '../utils'
+import {getLinksFromString, createPlaylistAndEmbedURLs} from '../utils'
 
 
 
@@ -23,11 +23,13 @@ export default function Popup() {
     
         chrome.tabs.executeScript(id, { code }, function(result) {
           const links = getLinksFromString(result[0]);
-          const urls = getIdsFromLinksAndCreatePlaylist(links);
+          if (links != null) {
+          const urls = createPlaylistAndEmbedURLs(links);
 
           if (urls != null && urls.length > 0) {
             setPlayListURL(urls[0])
           }
+        }
 
          });
       }
